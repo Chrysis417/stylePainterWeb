@@ -8,18 +8,21 @@
 ## 1 安装（部署到本地）
 参考flask安装教程：  <https://dormousehole.readthedocs.io/en/latest/installation.html>
 1.安装虚拟环境，下载flask。确保venv和flaskr文件夹在同一级目录下.
-    cd styleWeb    
+    ```cd styleWeb    
     python3 -m venv venv    
     . venv/bin/activate    
-    pip install Flask    
-
+    pip install Flask  
+    ```
 2.设置环境变量并运行flask
-    export FLASK_APP=flaskr
+    ```export FLASK_APP=flaskr
     export FLASK_ENV=development
+    ```
 3.初始化数据库（flask自带的sqlite，可能以后要换?）
-    flask init-db
+    ```flask init-db
+    ```
 4.运行网站
-    flask run
+    ```flask run
+    ```
 5.浏览器打开http://127.0.0.1:5000/
 
 或者安装到本地。参考<https://dormousehole.readthedocs.io/en/latest/tutorial/install.html>
