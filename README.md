@@ -18,14 +18,17 @@
     pip install Flask
     
 2.设置环境变量并运行flask
+
     export FLASK_APP=flaskr
     
     export FLASK_ENV=development
     
 3.初始化数据库（flask自带的sqlite，可能以后要换?）
+
     flask init-db
     
 4.运行网站
+
     flask run
     
 5.浏览器打开http://127.0.0.1:5000/
