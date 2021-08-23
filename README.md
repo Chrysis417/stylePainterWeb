@@ -7,6 +7,7 @@
 
 ## 1 安装（部署到本地）
 参考flask安装教程：  <https://dormousehole.readthedocs.io/en/latest/installation.html>
+
 1.安装虚拟环境，下载flask。确保venv和flaskr文件夹在同一级目录下.
 
     cd styleWeb
