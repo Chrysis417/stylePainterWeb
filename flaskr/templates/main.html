@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stylePainter</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='Webstyle.css')}}">
+    <script src="{{ url_for('static',filename='velocity.min.js')}}"></script>
+    <script src="{{ url_for('static',filename='js.js')}}"></script>
+</head>
+<body>
+
+    <div class="demo-container">
+        <div id="demo-2" class="demo demo-web-container demo-container-2">
+            <div class="demo-web-body">
+                
+                <div class="gallery-container">
+                
+                    <div id="demo-2-image-0" class="image-container"><div class="demo-2-image"></div></div>
+                    <div id="demo-2-image-1" class="image-container"><div class="demo-2-image"></div></div>
+                    <div id="demo-2-image-2" class="image-container"><div class="demo-2-image"></div></div>
+                    <div id="demo-2-image-3" class="image-container"><div class="demo-2-image"></div></div>
+    
+                    <div class="caption-container space-mono">
+                        <div id="demo-2-caption-0" class="caption">风格画师</div>
+                        <div id="demo-2-caption-1" class="caption">创作您自己的山水画</div>
+                        <div id="demo-2-caption-2" class="caption">感受稳重与灵动共存的端庄</div>
+                        <div id="demo-2-caption-3" class="caption">风格画师</div>
+                    </div>
+    
+                    <!-- <div class="demo-2-title space-mono">Rachel Ruysch</div>
+                    <div class="demo-2-footer space-mono">Contact</div> -->
+    
+                    <div class="gallery-container-border"></div>
+                    <div class="gallery-container-border-square"></div>  
+                </div>   
+            </div>
+        </div>
+    </div>
+    <div class="UI-container">
+        <div id="topBarWrapper">
+            <div id="topBar">
+                
+                    <a href="#">
+                        <img src="../static/backgrounds/logo.png" id="logo" alt="logo"></img>
+                    </a>                     
+                    
+                <ul id="shortcut">
+                    <li><a href="{{ url_for('upload.upload') }}" class="imgA">制作图片</a></li>
+                    <li><a href="{{ url_for('blog.index') }}" class="A">作品圈</a></li>
+                    {% if g.user %}
+                    <li><span> {{ g.user['username'] }}</span></li>
+                    <li><a href="{{ url_for('auth.logout') }}" class="A">登出</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for('auth.login') }}" class="A">登录</a></li>
+                    <li><a href="{{ url_for('auth.register') }}" class="A">注册</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
