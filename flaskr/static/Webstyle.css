@@ -12,7 +12,7 @@ body {
   line-height: 20px; 
   color: #11111a;
   -webkit-font-smoothing: antialiased;
-  background-color: #11111a;
+  background-color: #2e2e2e;
   height: 100%;
 }
 .clear-both{
@@ -143,7 +143,7 @@ body {
 }
 
 #demo-2-image-2 .demo-2-image{
-  background: transparent url("../static/backgrounds/bg3.jpg") no-repeat center;
+  background: transparent url("../static/backgrounds/bg3.jpeg") no-repeat center;
   background-size: cover;
 }
 
@@ -192,7 +192,7 @@ body {
 .UI-container{
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: 50px;
   z-index: 2;
 
 }
@@ -253,4 +253,16 @@ body {
 .imgA:hover{
   background-color: rgb(238,238,238);
   opacity: 1;
+}
+
+.uploadformWrapper{
+  height: 50px;
+  width: 100%;
+  margin: 90px auto;
+  z-index:3;
+  position:absolute
+}
+.uploadform{
+  width: 200px;
+  margin: 0 auto;
 }
