@@ -8,6 +8,7 @@ from flaskr.auth import login_required
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, url_for
 )
+from flaskr.db import get_db
 
 ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
@@ -32,6 +33,16 @@ def upload():
  
         upload_path = os.path.join(basepath, 'static/uploadImg', secure_filename(f.filename))
         f.save(upload_path)
+
+        title = g.user['username']
+        body = ""
+        db = get_db()
+        db.execute(
+                'INSERT INTO post (title, body, author_id, imgURL)'
+                ' VALUES (?, ?, ?, ?)',
+                (title, body, g.user['id'], f.filename)
+            )
+        db.commit()
 
         return render_template('uploadImg/upload_done.html',fileName=f.filename)
  

@@ -1,5 +1,5 @@
 html { font-family: sans-serif; background: #eee; padding: 1rem; }
-body { max-width: 960px; margin: 0 auto; background: white; }
+body { max-width: 960px; margin: 70px auto; background: white; }
 h1 { font-family: serif; color: #377ba8; margin: 1rem 0; }
 a { color: #377ba8; }
 hr { border: none; border-top: 1px solid lightgray; }
@@ -24,3 +24,60 @@ nav ul li a, nav ul li span, header .action { display: block; padding: 0.5rem; }
 .content textarea { min-height: 12em; resize: vertical; }
 input.danger { color: #cc2f2e; }
 input[type=submit] { align-self: start; min-width: 10em; }
+/* 下面使是topbar */
+#topBarWrapper {
+    width:100%;
+    height: 50px;
+    background-color: rgba(34,34,34,0);
+    position:fixed; top:0px;
+    margin-left:-180px;
+  }
+  #topBar {
+    height:50px;
+    width:80%;
+    margin:0 auto;
+    opacity: 1;
+  }
+  #logo{
+    margin-left: 0px;
+    margin-top: 8px;
+  }
+  #shortcut{
+    float:right;
+    list-style: none;
+    margin:0;
+    opacity: 1;
+  }
+  
+  #shortcut a{
+    padding:0 20px;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+    opacity: 1;
+  }
+  #shortcut li{
+    float:left;
+    line-height: 50px;
+    opacity: 1;
+  }
+  .A{
+    color:rgb(51,122,183);
+    opacity: 1;
+  }
+  .A:hover{
+    color:rgb(35,82,124);
+    background-color:white;
+    opacity: 1;
+  }
+  .imgA{
+    color:white;
+    background-color: rgb(51,122,183);
+    shape-rendering:circle;
+    opacity: 1;
+  }
+  .imgA:hover{
+    background-color: rgb(238,238,238);
+    opacity: 1;
+  }
