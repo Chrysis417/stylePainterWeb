@@ -36,14 +36,37 @@ def upload():
 
         title = g.user['username']
         body = ""
+        userName = g.user['username']
+        userId = g.user['id']
         db = get_db()
+        ordinal = db.execute(
+            'SELECT COUNT(*) AS ord'
+            ' FROM post'
+            ' WHERE author_id=?',
+            (userId,)
+        ).fetchone()
+
+        if ordinal is None :
+            ordinal = 1
+        
+        print(ordinal)
+        ordi=ordinal['ord']
+
+        
+        imgFilePath=os.path.join(basepath, 'static/uploadImg')
+        
+        imgSuffix=f.filename.rsplit('.', 1)[1].lower()
+        imgRename = (f'{userName}_{ordi}.{imgSuffix}')
+        
+        newPath=os.path.join(imgFilePath,imgRename)
+        os.rename(upload_path,newPath)
         db.execute(
                 'INSERT INTO post (title, body, author_id, imgName)'
                 ' VALUES (?, ?, ?, ?)',
-                (title, body, g.user['id'], f.filename)
+                (title, body, userId, imgRename)
             )
         db.commit()
 
-        return render_template('uploadImg/upload_done.html',imgName=f.filename)
+        return render_template('uploadImg/upload_done.html',imgName=imgRename)
  
     return render_template('uploadImg/upload.html')

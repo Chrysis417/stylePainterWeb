@@ -21,6 +21,7 @@
       </header>
       <p class="body">{{ post['body'] }}</p>
       <img src="../static/uploadImg/{{ post['imgName'] }}" width="400" height="400">
+      <p>{{post['imgName']}}</p>
     </article>
     {% if not loop.last %}
       <hr>
