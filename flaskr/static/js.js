@@ -62,7 +62,7 @@ function playDemo2(){
 
                     transitionFlag = 0;
                     
-                    if (demo2Counter < 2){
+                    if (demo2Counter < totalImages - 2 ){
                         demo2Counter++;
                     }
                     
