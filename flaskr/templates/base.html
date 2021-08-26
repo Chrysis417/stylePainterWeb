@@ -1,17 +1,12 @@
+<!--
+  flask的网页模板
+  注册，登录，作品圈的html扩展了本文件
+-->
+
 <!doctype html>
 <title>{% block title %}{% endblock %} - Flaskr</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<nav>
-  <ul>
-    {% if g.user %}
-      <li><span>{{ g.user['username'] }}</span>
-      <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
-    {% else %}
-      <li><a href="{{ url_for('auth.register') }}">Register</a>
-      <li><a href="{{ url_for('auth.login') }}">Log In</a>
-    {% endif %}
-  </ul>
-</nav>
+<link rel="stylesheet" href="{{ url_for('static', filename='blogStyle.css') }}">
+
 <section class="content">
   <header>
     {% block header %}{% endblock %}
@@ -21,6 +16,7 @@
   {% endfor %}
   {% block content %}{% endblock %}
 </section>
+
 <div class="UI-container">
   <div id="topBarWrapper">
       <div id="topBar">

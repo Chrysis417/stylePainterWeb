@@ -1,3 +1,5 @@
+// 主页滚动效果
+
 var canvas, ctx, code, point, style, drag = null, dPoint;
 
   var easeInOutCubic = [0.65, 0.05, 0.36, 1];

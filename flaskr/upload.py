@@ -38,12 +38,12 @@ def upload():
         body = ""
         db = get_db()
         db.execute(
-                'INSERT INTO post (title, body, author_id, imgURL)'
+                'INSERT INTO post (title, body, author_id, imgName)'
                 ' VALUES (?, ?, ?, ?)',
                 (title, body, g.user['id'], f.filename)
             )
         db.commit()
 
-        return render_template('uploadImg/upload_done.html',fileName=f.filename)
+        return render_template('uploadImg/upload_done.html',imgName=f.filename)
  
     return render_template('uploadImg/upload.html')
