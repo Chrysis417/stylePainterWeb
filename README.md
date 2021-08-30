@@ -49,6 +49,8 @@
 flaskr/static/backgrounds 目录下是主页的背景图和一些素材
 
 ## 3 结构
-static文件夹放的是js,css,图片等静态文件
-templates文件夹放html，其模板是jinja2
-各种py文件是实现网页的各模块功能
+static文件夹放的是js,css,图片等静态文件  
+
+templates文件夹放html，其模板是jinja2  
+
+各种py文件是实现网页的各模块功能  
