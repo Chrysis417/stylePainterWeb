@@ -43,8 +43,12 @@
 或者安装到本地。参考<https://dormousehole.readthedocs.io/en/latest/tutorial/install.html>
 
 ## 2 接口问题
-用户点击上传的图片会存在目录  flaskr/static/uploadImg  下
+
+用户点击上传的图片会存在目录  flaskr/static/uploadImg  下，并更名为{用户名_序号.格式}
+
+flaskr/static/backgrounds 目录下是主页的背景图和一些素材
 
 ## 3 结构
-static文件夹放的是js,css,图片等文件
-templates文件夹放html.模板是jinja2
+static文件夹放的是js,css,图片等静态文件
+templates文件夹放html，其模板是jinja2
+各种py文件是实现网页的各模块功能
