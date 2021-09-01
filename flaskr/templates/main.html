@@ -1,54 +1,65 @@
-<!-- 
-主页的html
- -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>stylePainter</title>
-    <link rel="stylesheet" href="{{ url_for('static',filename='webStyle.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Webstyle.css')}}">
     <script src="{{ url_for('static',filename='velocity.min.js')}}"></script>
     <script src="{{ url_for('static',filename='js.js')}}"></script>
 </head>
+
 <body>
 
     <div class="demo-container">
         <div id="demo-2" class="demo demo-web-container demo-container-2">
             <div class="demo-web-body">
-                
+
                 <div class="gallery-container">
-                
-                    <div id="demo-2-image-0" class="image-container"><div class="demo-2-image"></div></div>
-                    <div id="demo-2-image-1" class="image-container"><div class="demo-2-image"></div></div>
-                    <div id="demo-2-image-2" class="image-container"><div class="demo-2-image"></div></div>
-                    <div id="demo-2-image-3" class="image-container"><div class="demo-2-image"></div></div>
-    
-                    <div class="caption-container space-mono">
-                        <div id="demo-2-caption-0" class="caption">风格画师</div>
-                        <div id="demo-2-caption-1" class="caption">创作您自己的山水画</div>
-                        <div id="demo-2-caption-2" class="caption">感受稳重与灵动共存的端庄</div>
-                        <div id="demo-2-caption-3" class="caption">风格画师</div>
+
+                    <div id="demo-2-image-0" class="image-container" data-interval="1000">
+                        <div class="demo-2-image"></div>
                     </div>
-    
+                    <div id="demo-2-image-1" class="image-container" data-interval="1000">
+                        <div class="demo-2-image"></div>
+                    </div>
+                    <div id="demo-2-image-2" class="image-container" data-interval="1000">
+                        <div class="demo-2-image"></div>
+                    </div>
+                    <div id="demo-2-image-3" class="image-container">
+                        <div class="demo-2-image"></div>
+                    </div>
+
+                    <div class="caption-container space-mono">
+
+                        <div id="demo-2-caption-0" class="caption">一张五彩，映出的又岂止山水草木。</div>
+                        <div id="demo-2-caption-1" class="caption">在这里，无形的“风格画师”将与您一起</div>
+                        <div id="demo-2-caption-2" class="caption">感受稳重与灵动共存的美好</div>
+                        <div id="demo-2-caption-3" class="caption">一张五彩，映出的又岂止山水草木。</div>
+                    </div>
+
                     <!-- <div class="demo-2-title space-mono">Rachel Ruysch</div>
                     <div class="demo-2-footer space-mono">Contact</div> -->
-    
+
                     <div class="gallery-container-border"></div>
-                    <div class="gallery-container-border-square"></div>  
-                </div>   
+                    <div class="gallery-container-border-square"></div>
+                </div>
             </div>
         </div>
     </div>
+
     <div class="UI-container">
+        <div id="meeting"></div>
+        <a href="{{ url_for('upload.upload') }}"><button class="button" style="vertical-align:middle"><span>开启我的水墨画之旅 </span></button></a>
         <div id="topBarWrapper">
             <div id="topBar">
-                
-                    <a href="{{ url_for('index') }}">
-                        <img src="../static/backgrounds/logo.png" id="logo" alt="logo"></img>
-                    </a>                     
-                    
+
+                <a href="#">"
+                    <img src="../static/backgrounds/样稿10.png" id="logo" alt="Logo of Style-Painter" title="Logo of Style-Painter" width="350px" height="90px"></img>
+                </a>
+
                 <ul id="shortcut">
                     <li><a href="{{ url_for('upload.upload') }}" class="imgA">制作图片</a></li>
                     <li><a href="{{ url_for('blog.index') }}" class="A">作品圈</a></li>
@@ -64,6 +75,8 @@
         </div>
     </div>
 
-    
+
+
 </body>
+
 </html>

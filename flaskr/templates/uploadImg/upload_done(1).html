@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='Webstyle.css')}}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="UI-container">
+        <div id="topBarWrapper">
+            <div id="topBar">
+                
+                    <a href="{{ url_for('index') }}">
+                        <img src="../static/backgrounds/logo.png" id="logo" alt="logo"></img>
+                    </a>                     
+                    
+                <ul id="shortcut">
+                    <li><a href="{{ url_for('upload.upload') }}" class="imgA">制作图片</a></li>
+                    <li><a href="{{ url_for('blog.index') }}" class="A">作品圈</a></li>
+                    {% if g.user %}
+                    <li><span> {{ g.user['username'] }}</span></li>
+                    <li><a href="{{ url_for('auth.logout') }}" class="A">登出</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for('auth.login') }}" class="A">登录</a></li>
+                    <li><a href="{{ url_for('auth.register') }}" class="A">注册</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="uploadformWrapper">
+        <form class="uploadform" action="" enctype='multipart/form-data' method='POST'>
+            <input type="file" name="file"/>
+            <br>
+            <input type="submit" value="上传" class="button-new"/>
+        </form>
+        <img src="../static/uploadImg/{{imgName}}" width="500" height="500"/>
+        <p>"{{fileName}}"</p>
+    </div>
+</body>
+</html>

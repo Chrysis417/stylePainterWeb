@@ -20,11 +20,11 @@ body {
 }
 
 .mono {
-    font-family: cursive;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .space-mono {
-    font-family: cursive;
+    font-family: 'Space Mono', monospace;
 }
 
 .demo-container {
@@ -131,22 +131,22 @@ body {
 }
 
 #demo-2-image-0 .demo-2-image {
-    background: transparent url("../static/backgrounds/bg1.jpg") no-repeat center;
+    background: transparent url("./bg1.jpg") no-repeat center;
     background-size: cover;
 }
 
 #demo-2-image-1 .demo-2-image {
-    background: transparent url("../static/backgrounds/bg2.jpg") no-repeat center;
+    background: transparent url("./bg2.jpg") no-repeat center;
     background-size: cover;
 }
 
 #demo-2-image-2 .demo-2-image {
-    background: transparent url("../static/backgrounds/bg3.jpeg") no-repeat center;
+    background: transparent url("./bg3.jpeg") no-repeat center;
     background-size: cover;
 }
 
 #demo-2-image-3 .demo-2-image {
-    background: transparent url("../static/backgrounds/bg1.jpg") no-repeat center;
+    background: transparent url("./bg1.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -214,7 +214,7 @@ body {
 
 #logo {
     margin-left: -150px;
-    margin-top: 8px;
+    margin-top: 5px;
 }
 
 #shortcut {
@@ -260,100 +260,4 @@ body {
 .imgA:hover {
     background-color: rgb(238, 238, 238);
     opacity: 1;
-}
-
-#meeting {
-    width: 1920px;
-    height: 400px;
-    background-image: url(../static/backgrounds/nice.png);
-    background-repeat: no-repeat;
-    background-position: 437px 100px;
-}
-
-
-/* 以下为“开启水墨画之旅”按钮 */
-
-.button {
-    display: inline-block;
-    border-radius: 15px;
-    background-color: #f4511e;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 10px;
-    width: 200px;
-    height: 100px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 2px;
-}
-
-.button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-
-.button span:after {
-    content: '»';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-
-.button:hover span {
-    padding-right: 25px;
-    padding-left: 0px;
-}
-
-.button:hover span:after {
-    opacity: 1;
-    right: 0;
-}
-
-.button {
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    font-size: 30px;
-    color: #FFFFFF;
-    font-family: cursive;
-    padding: 20px;
-    width: 1540px;
-    height: 20px;
-    text-align: center;
-    -webkit-transition-duration: 0s;
-    /* Safari */
-    transition-duration: 0s;
-    text-decoration: none;
-    overflow: hidden;
-    cursor: pointer;
-    line-height: 0px;
-}
-
-.button:after {
-    content: "";
-    background: transparent;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -10px!important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 0.8s
-}
-
-.button:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0.5s
-}
-
-span {
-    height: 10px;
 }

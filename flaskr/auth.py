@@ -50,8 +50,6 @@ def login():
             'SELECT * FROM user WHERE username = ?', (username,)
         ).fetchone()
 
-        print(user)
-
         if user is None:
             error = 'Incorrect username.'
         elif not check_password_hash(user['password'], password):
