@@ -13,7 +13,7 @@
 
 ## 1 安装（部署到本地）
 
-flaskr/static 目录下应该有一个uploadImg文件夹，不知为何遗漏了，clone到本地记得加上（
+#### flaskr/static 目录下应该有一个uploadImg文件夹，不知为何遗漏了，clone到本地记得加上（
 
 参考flask安装教程：  <https://dormousehole.readthedocs.io/en/latest/installation.html>
 
