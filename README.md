@@ -12,6 +12,9 @@
 发帖功能考虑砍掉，毕竟不是论坛
 
 ## 1 安装（部署到本地）
+
+flaskr/static 目录下应该有一个uploadImg文件夹，不知为何遗漏了，clone到本地记得加上（
+
 参考flask安装教程：  <https://dormousehole.readthedocs.io/en/latest/installation.html>
 
 1.安装虚拟环境，下载flask。确保venv和flaskr文件夹在同一级目录下.
