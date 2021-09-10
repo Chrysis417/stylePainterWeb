@@ -49,10 +49,8 @@ def upload():
         if ordinal is None :
             ordinal = 1
         
-        print(ordinal)
         ordi=ordinal['ord']
-
-        
+      
         imgFilePath=os.path.join(basepath, 'static/uploadImg')
         
         imgSuffix=f.filename.rsplit('.', 1)[1].lower()
